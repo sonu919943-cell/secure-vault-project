@@ -1,0 +1,6 @@
+flask
+flask-sqlalchemy
+flask-bcrypt
+cryptography
+python-dotenv
+gunicorn

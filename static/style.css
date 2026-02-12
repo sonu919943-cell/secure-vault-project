@@ -1,0 +1,12 @@
+:root { --primary: #00d2ff; --bg: #0f172a; --card: #1e293b; --text: #f8fafc; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }
+.auth-box { background: var(--card); padding: 40px; border-radius: 15px; width: 350px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); text-align: center; }
+input { width: 100%; padding: 12px; margin: 10px 0; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: white; box-sizing: border-box; }
+.btn { width: 100%; padding: 12px; background: var(--primary); border: none; border-radius: 8px; color: black; font-weight: bold; cursor: pointer; }
+.link { color: var(--primary); text-decoration: none; font-size: 0.8rem; margin-top: 15px; display: block; }
+
+/* Add to your existing style.css for better mobile support */
+@media (max-width: 768px) {
+    body { flex-direction: column; }
+    .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #334155; }
+}
