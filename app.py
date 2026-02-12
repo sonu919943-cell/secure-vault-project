@@ -49,21 +49,21 @@ class Asset(db.Model):
 with app.app_context():
     db.create_all()
 
-# --- OTP LOGIC ---
-def send_otp(receiver_email, otp):
-    msg = EmailMessage()
-    msg['Subject'] = "🔐 OTP for Secure Asset Manager"
-    msg['From'] = SENDER_EMAIL
-    msg['To'] = receiver_email
-    msg.set_content(f"Your OTP for login is: {otp}")
-    try:
-        with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-            smtp.login(SENDER_EMAIL, SENDER_APP_PASSWORD)
-            smtp.send_message(msg)
-        return True
-    except Exception as e:
-        print(f"SMTP Error: {e}")
-        return False
+# # --- OTP LOGIC ---
+# def send_otp(receiver_email, otp):
+#     msg = EmailMessage()
+#     msg['Subject'] = "🔐 OTP for Secure Asset Manager"
+#     msg['From'] = SENDER_EMAIL
+#     msg['To'] = receiver_email
+#     msg.set_content(f"Your OTP for login is: {otp}")
+#     try:
+#         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+#             smtp.login(SENDER_EMAIL, SENDER_APP_PASSWORD)
+#             smtp.send_message(msg)
+#         return True
+#     except Exception as e:
+#         print(f"SMTP Error: {e}")
+#         return False
 
 # --- ROUTES ---
 
